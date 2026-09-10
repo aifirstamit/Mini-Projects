@@ -1,2 +1,8 @@
 2026-09-11 00:23:02,678 - ERROR - Login failed for username: 21
 2026-09-11 00:23:02,679 - CRITICAL - Application error: Invalid username or password.
+2026-09-11 00:27:42,024 - ERROR - Login failed for username: amit
+2026-09-11 00:27:42,032 - CRITICAL - Application error: Invalid username or password.
+2026-09-11 00:28:06,025 - ERROR - Login failed for username: USERNAME
+2026-09-11 00:28:06,025 - CRITICAL - Application error: Invalid username or password.
+2026-09-11 00:28:32,803 - ERROR - Login failed for username: USERNAME
+2026-09-11 00:28:32,803 - CRITICAL - Application error: Invalid username or password.

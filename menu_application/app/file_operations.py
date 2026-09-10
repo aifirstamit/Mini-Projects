@@ -75,9 +75,15 @@ def write_file():
         print("WARNING: File name cannot be empty.")
         return
 
-    file_path = DATA_DIR / filename
-
     try:
+        # Create the data folder if it does not exist
+        DATA_DIR.mkdir(
+            parents=True,
+            exist_ok=True
+        )
+
+        file_path = DATA_DIR / filename
+
         file_path.write_text(
             content,
             encoding="utf-8"

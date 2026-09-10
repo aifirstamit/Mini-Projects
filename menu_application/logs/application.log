@@ -3,3 +3,21 @@
 2026-09-11 00:23:02,678 - ERROR - Login failed for username: 21
 2026-09-11 00:23:02,679 - CRITICAL - Application error: Invalid username or password.
 2026-09-11 00:23:08,117 - INFO - Application closed without active login.
+2026-09-11 00:27:17,606 - DEBUG - Application started.
+2026-09-11 00:27:21,013 - INFO - Write file attempted without login.
+2026-09-11 00:27:30,032 - INFO - Write file attempted without login.
+2026-09-11 00:27:35,854 - DEBUG - Login operation started.
+2026-09-11 00:27:42,024 - ERROR - Login failed for username: amit
+2026-09-11 00:27:42,032 - CRITICAL - Application error: Invalid username or password.
+2026-09-11 00:27:59,802 - DEBUG - Login operation started.
+2026-09-11 00:28:06,025 - ERROR - Login failed for username: USERNAME
+2026-09-11 00:28:06,025 - CRITICAL - Application error: Invalid username or password.
+2026-09-11 00:28:09,304 - INFO - Write file attempted without login.
+2026-09-11 00:28:24,623 - DEBUG - Login operation started.
+2026-09-11 00:28:32,803 - ERROR - Login failed for username: USERNAME
+2026-09-11 00:28:32,803 - CRITICAL - Application error: Invalid username or password.
+2026-09-11 00:29:10,605 - DEBUG - Login operation started.
+2026-09-11 00:29:16,522 - INFO - User logged in successfully.
+2026-09-11 00:29:21,570 - DEBUG - Write file operation started.
+2026-09-11 00:29:36,714 - INFO - File written successfully: test.txt
+2026-09-11 00:29:41,604 - INFO - User logged out.

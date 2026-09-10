@@ -1,0 +1,12 @@
+2026-09-10 23:18:05,415 - INFO - SUCCESS: Moved 'data.csv' to 'test_files\Data\data.csv'
+2026-09-10 23:18:05,416 - INFO - SUCCESS: Moved 'notes.txt' to 'test_files\Text\notes.txt'
+2026-09-10 23:18:05,417 - INFO - SUCCESS: Moved 'photo.jpg' to 'test_files\Images\photo.jpg'
+2026-09-10 23:18:05,418 - ERROR - FAILED: Unsupported file type: .exe
+2026-09-10 23:18:05,419 - INFO - SUCCESS: Moved 'report.pdf' to 'test_files\Documents\report.pdf'
+2026-09-10 23:18:05,421 - INFO - SUCCESS: Moved 'song.mp3' to 'test_files\Audio\song.mp3'
+2026-09-10 23:18:05,423 - INFO - SUCCESS: Moved 'video.mp4' to 'test_files\Videos\video.mp4'
+2026-09-10 23:19:09,184 - INFO - SUCCESS: Moved 'photo.jpg' to 'test_files\Images\photo_1.jpg'
+2026-09-10 23:19:09,185 - ERROR - FAILED: Unsupported file type: .exe
+2026-09-10 23:20:20,643 - ERROR - FAILED: Unsupported file type: .exe
+2026-09-10 23:22:24,802 - ERROR - FAILED: Source folder does not exist: missing_folder
+2026-09-10 23:23:00,598 - ERROR - FAILED: Unsupported file type: .exe

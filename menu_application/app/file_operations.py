@@ -1,68 +1,102 @@
+from pathlib import Path
+
 from .logger import (
     log_debug,
     log_info,
+    log_warning,
     log_error,
 )
 
 
-def calculate():
-    """Perform a calculation."""
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
-    log_debug("Calculation operation started.")
+
+def read_file():
+    """Read content from a file."""
+
+    log_debug("Read file operation started.")
+
+    filename = input("Enter file name: ").strip()
+
+    file_path = DATA_DIR / filename
 
     try:
-        first_number = float(
-            input("Enter first number: ")
-        )
-
-        second_number = float(
-            input("Enter second number: ")
-        )
-
-        operator = input(
-            "Enter operator (+, -, *, /): "
-        ).strip()
-
-        if operator == "+":
-            result = first_number + second_number
-
-        elif operator == "-":
-            result = first_number - second_number
-
-        elif operator == "*":
-            result = first_number * second_number
-
-        elif operator == "/":
-            result = first_number / second_number
-
-        else:
+        if not file_path.exists():
             log_error(
-                f"Unsupported operator: {operator}"
+                f"File could not be opened: {filename}"
             )
-
-            print("Invalid operator.")
+            print("ERROR: File does not exist.")
             return
 
-        print(f"Result: {result}")
+        content = file_path.read_text(
+            encoding="utf-8"
+        )
 
-        log_info("Calculation completed.")
+        if not content.strip():
+            log_warning(
+                f"File was empty: {filename}"
+            )
+            print("WARNING: File is empty.")
+            return
 
-    except ValueError as error:
+        print("\nFile Content:")
+        print(content)
 
+        log_info(
+            f"File read successfully: {filename}"
+        )
+
+    except PermissionError as error:
         log_error(
-            f"Invalid numeric input: {error}"
+            f"Permission denied: {error}"
         )
+        print("ERROR: Permission denied.")
 
-        print(
-            "ERROR: Please enter valid numbers."
-        )
-
-    except ZeroDivisionError as error:
-
+    except OSError as error:
         log_error(
-            f"Division by zero: {error}"
+            f"File could not be opened: {error}"
+        )
+        print("ERROR: File could not be opened.")
+
+
+def write_file():
+    """Write content to a file."""
+
+    log_debug("Write file operation started.")
+
+    filename = input("Enter file name: ").strip()
+
+    content = input("Enter content: ")
+
+    if not filename:
+        log_warning(
+            "Write operation received empty filename."
+        )
+        print("WARNING: File name cannot be empty.")
+        return
+
+    file_path = DATA_DIR / filename
+
+    try:
+        file_path.write_text(
+            content,
+            encoding="utf-8"
         )
 
-        print(
-            "ERROR: Cannot divide by zero."
+        log_info(
+            f"File written successfully: {filename}"
         )
+
+        print("File written successfully.")
+
+    except PermissionError as error:
+        log_error(
+            f"Permission denied while writing file: {error}"
+        )
+        print("ERROR: Permission denied.")
+
+    except OSError as error:
+        log_error(
+            f"File could not be written: {error}"
+        )
+        print("ERROR: File could not be written.")
